@@ -49,3 +49,13 @@ document.querySelector("input[type='submit']").addEventListener("click", functio
         list.appendChild(li);
 
 });
+var tms = document.getElementsByClassName("delete");
+for(let i=0; i<tms.length; i++){
+    tms[i].addEventListener('click',del);
+}
+function del(e){
+    if(confirm("are you sure?")){
+        var d = e.target.parentElement;
+        list.removeChild(d);
+    }
+}
